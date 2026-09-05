@@ -1,0 +1,49 @@
+﻿@using IdentityCoreDemo.ViewModel
+
+@model RegisterViewModel
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-sm-12 col-lg-6 p-4 bg-body-tertiary">
+            <form method="post">
+                <div class="mb-2 p-3 bg-success text-white">
+                   <h2 class="text-center">USER REGISTRATION FORM</h2> 
+                </div>
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div>
+                    <label asp-for="Name" class="form-label"></label>
+                    <input asp-for="Name" class="form-control"/>
+                    <span asp-validation-for="Name" class="text-danger p-2"></span>
+                </div>
+                <div>
+                    <label asp-for="Email" class="form-label"></label>
+                    <input type="email" asp-for="Email " class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger p-2"></span>
+                </div>
+                <div>
+                    <label asp-for="Phone" class="form-label"></label>
+                    <input type="tel" asp-for="Phone" class="form-control" />
+                    <span asp-validation-for="Phone" class="text-danger p-2"></span>
+                </div>
+                <div>
+                    <label asp-for="DOB" class="form-label"></label>
+                    <input type="date" asp-for="DOB" class="form-control" />
+                    <span asp-validation-for="DOB" class="text-danger p-2"></span>
+                </div>
+                <div>
+                    <label asp-for="Password" class="form-label"></label>
+                    <input asp-for="Password" class="form-control" />
+                    <span asp-validation-for="Password" class="text-danger p-2"></span>
+                </div>
+                <div>
+                    <label asp-for="ConfirmPassword" class="form-label"></label>
+                    <input asp-for="ConfirmPassword" class="form-control" />
+                    <span asp-validation-for="ConfirmPassword" class="text-danger p-2"></span>
+                </div>
+ 
+                <div>
+                    <input type="submit" value="Register me" class="btn btn-success btn-lg"/>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
